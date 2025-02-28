@@ -21,10 +21,6 @@ public class TestBase {
     AuthorizationApi authorizationApi = new AuthorizationApi();
     BooksApi booksApi = new BooksApi();
 
-    public static void setUp() {
-        // Устанавливаем парсер по умолчанию для JSON
-        RestAssured.defaultParser = Parser.JSON;
-    }
 
     @BeforeAll
     static void setup() {

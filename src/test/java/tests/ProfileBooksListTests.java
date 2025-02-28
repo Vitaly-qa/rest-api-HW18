@@ -1,6 +1,8 @@
 package tests;
 
 import api.BooksApi;
+import io.restassured.RestAssured;
+import io.restassured.parsing.Parser;
 import models.lombok.AddBooksListModel;
 import models.lombok.IsbnModel;
 import models.lombok.LoginResponseModel;
@@ -26,7 +28,6 @@ public class ProfileBooksListTests extends TestBase {
     @DisplayName("Удаляем книгу из профиля пользователя")
     void deleteBookFromProfileTest () {
         LoginResponseModel loginResponse = authorizationApi.login (credentials);
-
 
         BooksApi booksApi = new BooksApi();
         booksApi.deleteAllBooks(loginResponse);

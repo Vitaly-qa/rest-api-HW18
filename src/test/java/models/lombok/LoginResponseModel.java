@@ -1,10 +1,9 @@
 package models.lombok;
-import io.qameta.allure.internal.shadowed.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
 public class LoginResponseModel {
-
     String userId;
     String username;
     String password;
