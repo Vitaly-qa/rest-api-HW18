@@ -4,13 +4,13 @@ import io.qameta.allure.Step;
 import models.lombok.AddBooksListModel;
 import models.lombok.DeleteBookListModel;
 import models.lombok.LoginResponseModel;
-
 import static io.restassured.RestAssured.given;
 import static specs.TestSpec.*;
 
 public class BooksApi {
 
     @Step("Удаляем все книги из профиля пользователя")
+
     public void deleteAllBooks(LoginResponseModel loginResponse) {
 
         given(requestSpec)
